@@ -89,6 +89,21 @@ gulp.task('task-name', function () {
 ```
 src输入源文件，pipe到插件处理后，输出到dest。
 
+自动处理jade的任务：
+```
+var jade = require('gulp-jade');
+ 
+gulp.task('templates', function() {
+ 
+  gulp.src('/src/*.jade')
+    .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('dist/'))
+});
+```
+`pretty:true` 意思是对输出的html排版。不做设置的话，默认压缩html。
+
 ### 监视文件变动
 监视文件变动代码如下：
 ```
@@ -97,6 +112,7 @@ gulp.watch('files-to-watch', ['tasks', 'to', 'run']);
 
 或者使用通配符：
 ```
+// **/*表示任意文件夹下的任意文件
 gulp.watch('app/scss/**/*.scss', ['sass']);
 ```
 
@@ -148,5 +164,36 @@ gulp.task('watch', function() {
 2、点击Chrome地址栏右边livereload按钮变成实心圈，即为启用。
 
 此时修改文件，浏览器即可自动刷新。
+
+### gulp + jade + livereload完整例子
+gulpfile.js:
+```
+var gulp = require('gulp'),
+  livereload = require('gulp-livereload'),
+  jade = require('gulp-jade');
+
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('src/*.*', function(event) {  
+    livereload.changed(event.path);  
+  });  
+
+  //监视jade文件修改，执行jade任务
+  gulp.watch('src/*.jade', ['jade']);
+});
+
+gulp.task('jade', function() {
+  gulp.src('src/*.jade')
+  .pipe(jade(
+    {pretty: true}
+    ))
+  .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('default', ['watch']);
+```
+输入不带参数的命令：`$ gulp`，自动执行default任务。
+
+实现自动处理jade，并自动刷新浏览器。
 ## 参考文章
 https://www.cnblogs.com/Tom-yi/p/8036730.html
