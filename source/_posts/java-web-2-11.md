@@ -5,12 +5,14 @@ tags: java web
 categories: Java Web
 ---
 
-使用SSH架构（Spring+SpringMVC+Hibernate）实现了简单的调查问卷网站。效果如图：
+使用SSH架构（Spring+SpringMVC+Hibernate）实现了简单的调查问卷网站。
+<!-- more -->
+效果如图：
 ![投票页面](http://upload-images.jianshu.io/upload_images/6240664-24695bd8ed1d0ff3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720)
 ![查看结果页面](http://upload-images.jianshu.io/upload_images/6240664-d06f222135008a0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720)
 
 下面整理实现流程。
-<!-- more -->
+
 ---
 
 ## 前言

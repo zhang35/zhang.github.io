@@ -13,9 +13,9 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zhang35.github.io
+url: https://zhang35.coding.me
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year-:title.html
 permalink_defaults:
 
 # Directory
@@ -79,6 +79,13 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:zhang35/zhang35.github.io.git
-  branch: master
+  repository:
+    coding: git@git.coding.net:zhang35/zhang35.git,master
+    github: git@github.com:zhang35/zhang35.github.io.git,master
   message: 'Daily update: {{now("YYYY-MM-DD HH:mm:ss")}} by zhang35'
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
