@@ -108,13 +108,6 @@ gulp.task('watch', function(){
 })
 ```
 
-执行`gulp watch`命令，每次修改文件，Gulp就能自动执行任务。
-```
-gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('src/html/*.less');
-});
-```
 ### 使用livereload插件自动刷新浏览器
 以监视html文件为例，一旦有变动，自动生成并刷新浏览器。
 #### 本地安装gulp-livereload
@@ -127,7 +120,11 @@ var gulp = require('gulp'),
  
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('src/html/*.html');
+
+    //监视src文件夹下所有文件
+    gulp.watch('src/*.*', function(event) {  
+        livereload.changed(event.path);  
+    }); 
 });
 ```
 
