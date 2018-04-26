@@ -1,12 +1,12 @@
 ---
-title: 使用hexo+gitpage搭建个人博客
+title: 使用hexo搭建个人博客
 date: 2018-04-14 15:00:03
 tags: 
 - hexo
 - next
 - gitpage
 categories: hexo个人博客
-description:
+description:使用hexo+next主题，分别在Github pages和Coding Pages上搭建个人博客
 ---
 
 ## 前言
