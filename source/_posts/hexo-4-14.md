@@ -6,7 +6,7 @@ tags:
 - next
 - gitpage
 categories: hexo个人博客
-description:使用hexo+next主题，分别在Github pages和Coding Pages上搭建个人博客
+description: 使用hexo+next主题，分别在Github pages和Coding Pages上搭建个人博客。
 ---
 
 ## 前言
@@ -20,8 +20,6 @@ description:使用hexo+next主题，分别在Github pages和Coding Pages上搭�
 于是需要自动构建博客框架的工具，就能从配置、生成等杂活中解放出来，把重点放在写上。
 
 常见的工具有hexo、jekyll等。本文使用hexo+next主题。
-
-<!-- more -->
 
 ## Hexo介绍
 > Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
