@@ -1,5 +1,5 @@
 ---
-title: AngularJS-7-23
+title: AngularJS学习笔记
 date: 2018-07-23 08:11:21
 tags: AngularJS web
 categories: 前端开发
