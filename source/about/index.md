@@ -16,7 +16,7 @@ comments: false
 
 语言：C, C++, Java, Verilog, Html+css+js, Vb, Python 
 
-技能：Qt, Windows driver, Java Web（Spring+SpringMVC+Hibernate）
+技能：Qt, Windows driver, Java Web（Spring+SpringMVC+Hibernate），AngularJS
 
 ### 联系方式
 
