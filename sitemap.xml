@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhang35.github.io/about/index.html</loc>
+    
+    <lastmod>2020-09-23T05:36:27.374Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhang35.github.io/2018-vim-8-22.html</loc>
     
     <lastmod>2020-09-23T04:56:51.949Z</lastmod>
@@ -131,13 +138,6 @@
     <loc>https://zhang35.github.io/categories/index.html</loc>
     
     <lastmod>2020-09-22T06:07:52.302Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/about/index.html</loc>
-    
-    <lastmod>2020-09-22T06:07:52.301Z</lastmod>
     
   </url>
   
