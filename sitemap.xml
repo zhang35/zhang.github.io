@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhang35.github.io/2020-spark-rdd.html</loc>
+    
+    <lastmod>2020-09-24T05:40:01.795Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhang35.github.io/2020-return-to-blog.html</loc>
     
     <lastmod>2020-09-24T05:04:59.509Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://zhang35.github.io/2020-leetcode-501.html</loc>
     
     <lastmod>2020-09-24T04:07:56.396Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-spark-rdd.html</loc>
-    
-    <lastmod>2020-09-24T01:52:27.299Z</lastmod>
     
   </url>
   
