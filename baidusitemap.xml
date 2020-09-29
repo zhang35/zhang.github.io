@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhang35.github.io/2020-Scala/scala-grammar.html</loc>
+    <lastmod>2020-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
+    <lastmod>2020-09-29</lastmod>
+  </url>
+  <url>
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-145.html</loc>
     <lastmod>2020-09-29</lastmod>
   </url>
@@ -14,10 +22,6 @@
   </url>
   <url>
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-106.html</loc>
-    <lastmod>2020-09-29</lastmod>
-  </url>
-  <url>
-    <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
     <lastmod>2020-09-29</lastmod>
   </url>
   <url>

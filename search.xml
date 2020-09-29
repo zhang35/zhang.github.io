@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>scala-grammar</title>
+      <link href="2020-Scala/scala-grammar.html"/>
+      <url>2020-Scala/scala-grammar.html</url>
+      
+        <content type="html"><![CDATA[<p>## </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Scala </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> scala </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode[145]Binary Tree Postorder Traversal Python3实现</title>
       <link href="2020-LeetCode/leetcode-145.html"/>
       <url>2020-LeetCode/leetcode-145.html</url>
@@ -33,7 +58,7 @@
       <link href="2020-SQL/sql-grammar.html"/>
       <url>2020-SQL/sql-grammar.html</url>
       
-        <content type="html"><![CDATA[<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h2><p>substring(str, pos);<br>substring(str, pos, len)<br>上面的表达式可以省略掉第三个参数，如：<br>substring(<code>station</code>,instr(<code>station</code>, ‘号线’)+2)<br>能正常运行。</p><h2 id="字符串合并"><a href="#字符串合并" class="headerlink" title="字符串合并"></a>字符串合并</h2><p>concat(str1, str2,…)<br>例如：concat(LINE_NO,’号线’,ST_NAME)</p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>注意时间格式的区别：<br>yyyy/MM/dd HH:mm:ss<br>yyyy-MM-dd HH:mm:ss<br>防止出现意料之外的错误。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h2><p>substring(str, pos);<br>substring(str, pos, len)<br>上面的表达式可以省略掉第三个参数，如：<br>substring(<code>station</code>,instr(<code>station</code>, ‘号线’)+2)<br>能正常运行。</p><h2 id="字符串合并"><a href="#字符串合并" class="headerlink" title="字符串合并"></a>字符串合并</h2><p>concat(str1, str2,…)<br>例如：concat(LINE_NO,’号线’,ST_NAME)</p><h2 id="日期比较"><a href="#日期比较" class="headerlink" title="日期比较"></a>日期比较</h2><p>select * from trajectory_copy<br>WHERE DATE_SUB(lastmodified_time, INTERVAL 8 HOUR) &gt;= DATE_SUB(NOW(), INTERVAL 2 MINUTE)</p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>注意时间格式的区别：<br>yyyy/MM/dd HH:mm:ss<br>yyyy-MM-dd HH:mm:ss<br>防止出现意料之外的错误。</p>]]></content>
       
       
       <categories>

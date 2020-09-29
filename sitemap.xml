@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhang35.github.io/2020-Scala/scala-grammar.html</loc>
+    
+    <lastmod>2020-09-29T11:11:16.312Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
+    
+    <lastmod>2020-09-29T05:44:04.436Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-145.html</loc>
     
     <lastmod>2020-09-29T04:57:02.083Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-106.html</loc>
     
     <lastmod>2020-09-29T02:56:00.496Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
-    
-    <lastmod>2020-09-29T02:54:37.974Z</lastmod>
     
   </url>
   
