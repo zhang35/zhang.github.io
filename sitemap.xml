@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhang35.github.io/2020-LeetCode/leetcode-145.html</loc>
+    
+    <lastmod>2020-09-29T04:57:02.083Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-LeetCode/leetcode-235.html</loc>
+    
+    <lastmod>2020-09-29T02:56:25.806Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-LeetCode/leetcode-113.html</loc>
+    
+    <lastmod>2020-09-29T02:56:03.022Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-106.html</loc>
     
-    <lastmod>2020-09-29T02:46:47.844Z</lastmod>
+    <lastmod>2020-09-29T02:56:00.496Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
+    
+    <lastmod>2020-09-29T02:54:37.974Z</lastmod>
     
   </url>
   
@@ -40,20 +68,6 @@
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-501.html</loc>
     
     <lastmod>2020-09-29T02:45:23.756Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-LeetCode/leetcode-235.html</loc>
-    
-    <lastmod>2020-09-29T02:39:51.405Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-LeetCode/leetcode-113.html</loc>
-    
-    <lastmod>2020-09-29T02:38:41.057Z</lastmod>
     
   </url>
   
