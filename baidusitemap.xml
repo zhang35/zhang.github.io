@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zhang35.github.io/2020-Scala/scala-grammar.html</loc>
-    <lastmod>2020-09-29</lastmod>
+    <loc>https://zhang35.github.io/2020-Scala/scala-try-catch.html</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/spark-hdfs.html</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/scala-json.html</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Scala/scala-json.html</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/spark-rdd.html</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/spark-sql.html</loc>
+    <lastmod>2020-09-30</lastmod>
   </url>
   <url>
     <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
@@ -59,10 +79,6 @@
   <url>
     <loc>https://zhang35.github.io/2018-Algorithm/c-2-side-bubble-sort.html</loc>
     <lastmod>2020-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://zhang35.github.io/2020-Spark/spark-rdd.html</loc>
-    <lastmod>2020-09-24</lastmod>
   </url>
   <url>
     <loc>https://zhang35.github.io/2020-Notes/return-to-blog.html</loc>

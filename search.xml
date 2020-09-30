@@ -4,16 +4,16 @@
   
     
     <entry>
-      <title>scala-grammar</title>
-      <link href="2020-Scala/scala-grammar.html"/>
-      <url>2020-Scala/scala-grammar.html</url>
+      <title>scala try-Catch</title>
+      <link href="2020-Scala/scala-try-catch.html"/>
+      <url>2020-Scala/scala-try-catch.html</url>
       
-        <content type="html"><![CDATA[<p>## </p>]]></content>
+        <content type="html"><![CDATA[<h2 id="try-Catch"><a href="#try-Catch" class="headerlink" title="try-Catch"></a>try-Catch</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>try {<br>    // …<br>} catch {<br>    case ex: Exception =&gt; {<br>        ex.printStackTrace() // 打印到标准err<br>        System.err.println(“exception===&gt;: …”)  // 打印到标准err<br>    }<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p><pre><code>try {    val a = 1 / 0} catch {    case ex: Exception =&gt; {        println(&quot;bug&quot;)    }}</code></pre><p>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
       
       
       <categories>
           
-          <category> Scala </category>
+          <category> scala </category>
           
       </categories>
       
@@ -21,6 +21,106 @@
         <tags>
             
             <tag> scala </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spark操作hdfs</title>
+      <link href="2020-Spark/spark-hdfs.html"/>
+      <url>2020-Spark/spark-hdfs.html</url>
+      
+        <content type="html"><![CDATA[<p>官方说明：<a href="http://hadoop.apache.org/docs/r2.6.1/api/org/apache/hadoop/fs/FileSystem.html" target="_blank" rel="noopener">http://hadoop.apache.org/docs/r2.6.1/api/org/apache/hadoop/fs/FileSystem.html</a></p><h2 id="遍历hdfs目录文件"><a href="#遍历hdfs目录文件" class="headerlink" title="遍历hdfs目录文件"></a>遍历hdfs目录文件</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.hadoop.conf.<span class="type">Configuration</span></span><br><span class="line"><span class="keyword">import</span> org.apache.hadoop.fs.&#123;<span class="type">FileSystem</span>, <span class="type">Path</span>, <span class="type">FileUtil</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">Configuration</span>()</span><br><span class="line"><span class="keyword">val</span> hdfs= <span class="type">FileSystem</span>.get(conf)</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> savePath = <span class="string">"/"</span></span><br><span class="line"><span class="keyword">val</span> path = <span class="keyword">new</span> <span class="type">Path</span>(savePath)</span><br><span class="line"><span class="keyword">val</span> allFiles = <span class="type">FileUtil</span>.stat2Paths(hdfs.listStatus(path))</span><br><span class="line">allFiles.foreach(println)</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">打印结果：</span><br><span class="line"></span><br><span class="line">hdfs://master.xxx.com:8020/2CYS6GRQ3</span><br><span class="line">hdfs://master.xxx.com:8020/31.xlsx</span><br><span class="line">hdfs://master.xxx.com:8020/CanopyPredictParams.json</span><br><span class="line">...</span><br></pre></td></tr></table></figure><h2 id="delete操作"><a href="#delete操作" class="headerlink" title="delete操作"></a>delete操作</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> hdfs : <span class="type">FileSystem</span> = <span class="type">FileSystem</span>.get(<span class="keyword">new</span> <span class="type">Configuration</span>)</span><br><span class="line"><span class="keyword">val</span> path=<span class="keyword">new</span> <span class="type">Path</span>(bmNBPath)</span><br><span class="line"><span class="keyword">if</span>(hdfs.exists(path)) &#123;</span><br><span class="line">  <span class="keyword">if</span>(hdfs.isDirectory(path))</span><br><span class="line">    hdfs.delete(path, <span class="literal">true</span>) <span class="comment">//true代表递归删除，当path是目录时使用</span></span><br><span class="line">  <span class="keyword">else</span> hdfs.delete(path,<span class="literal">false</span>)  <span class="comment">//非递归删除，</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>原型：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">boolean</span> <span class="title">delete</span><span class="params">(Path f,</span></span></span><br><span class="line"><span class="function"><span class="params">             <span class="keyword">boolean</span> recursive)</span></span></span><br><span class="line"><span class="function">                        <span class="keyword">throws</span> IOException</span></span><br><span class="line"><span class="function">Delete a file.</span></span><br><span class="line"><span class="function">Parameters:</span></span><br><span class="line"><span class="function">f - the path to delete.</span></span><br><span class="line"><span class="function">recursive - <span class="keyword">if</span> path is a directory and set to <span class="keyword">true</span>, the directory is deleted <span class="keyword">else</span> <span class="keyword">throws</span> an exception. In <span class="keyword">case</span> of a file the recursive can be set to either <span class="keyword">true</span> or <span class="keyword">false</span>.</span></span><br><span class="line"><span class="function">Returns:</span></span><br><span class="line"><span class="function"><span class="keyword">true</span> <span class="keyword">if</span> delete is successful <span class="keyword">else</span> <span class="keyword">false</span>.</span></span><br><span class="line"><span class="function">Throws:</span></span><br><span class="line"><span class="function">IOException</span></span><br></pre></td></tr></table></figure><h2 id="exists操作：检查路径是否存在"><a href="#exists操作：检查路径是否存在" class="headerlink" title="exists操作：检查路径是否存在"></a>exists操作：检查路径是否存在</h2><p>原型：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exists</span><span class="params">(Path f)</span></span></span><br><span class="line"><span class="function">               <span class="keyword">throws</span> IOException</span></span><br><span class="line"><span class="function">Check <span class="keyword">if</span> a path exists. It is highly discouraged to call <span class="keyword">this</span> method back to back with other <span class="title">getFileStatus</span><span class="params">(Path)</span> calls, as <span class="keyword">this</span> will involve multiple redundant RPC calls in HDFS.</span></span><br><span class="line"><span class="function">Parameters:</span></span><br><span class="line"><span class="function">f - source path</span></span><br><span class="line"><span class="function">Returns:</span></span><br><span class="line"><span class="function"><span class="keyword">true</span> <span class="keyword">if</span> the path exists</span></span><br><span class="line"><span class="function">Throws:</span></span><br><span class="line"><span class="function">IOException - IO failure</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> spark </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spark </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>scala解析json</title>
+      <link href="2020-Spark/scala-json.html"/>
+      <url>2020-Spark/scala-json.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Gson解析json"><a href="#Gson解析json" class="headerlink" title="Gson解析json"></a>Gson解析json</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.google.gson.<span class="type">Gson</span></span><br><span class="line"><span class="keyword">import</span> com.google.gson.<span class="type">JsonParser</span></span><br><span class="line"><span class="keyword">import</span> scala.collection.mutable.<span class="type">ArrayBuffer</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> jsonparam = <span class="string">""</span><span class="string">"&#123;"</span><span class="type">RERUNNING</span><span class="string">":&#123;"</span>nodeN<span class="string">ame":"</span>test_zhangjiaqi_1<span class="string">","</span>preN<span class="string">odes":[],"</span>prevI<span class="string">nterpreters":[],"</span><span class="string">rerun":"</span><span class="string">false"&#125;,"</span><span class="string">name":"</span><span class="number">123123123</span><span class="string">sdfasdf","</span><span class="string">path":[&#123;"</span><span class="string">name":"</span>hdfs:<span class="comment">//master.xxxx.com:8020/data","path":"hdfs://master.xxxx.com:8020/data"&#125;]&#125;"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> gson = <span class="keyword">new</span> <span class="type">Gson</span>()</span><br><span class="line"><span class="keyword">val</span> parser = <span class="keyword">new</span> <span class="type">JsonParser</span>();</span><br><span class="line"><span class="keyword">val</span> p = parser.parse(jsonparam).getAsJsonObject()</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取单个值</span></span><br><span class="line"><span class="keyword">val</span> name = p.get(<span class="string">"name"</span>)</span><br><span class="line">println(name)</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取嵌套json对象</span></span><br><span class="line"><span class="keyword">val</span> jsonArray = p.getAsJsonArray(<span class="string">"path"</span>)</span><br><span class="line"><span class="keyword">val</span> je = jsonArray.get(<span class="number">0</span>).getAsJsonObject</span><br><span class="line">println(je.get(<span class="string">"name"</span>))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> scala </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> scala </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>scala解析json</title>
+      <link href="2020-Scala/scala-json.html"/>
+      <url>2020-Scala/scala-json.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Gson解析json"><a href="#Gson解析json" class="headerlink" title="Gson解析json"></a>Gson解析json</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.google.gson.<span class="type">Gson</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">App</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">  <span class="keyword">val</span> jsonparam = <span class="string">""</span><span class="string">"&#123;"</span>tableN<span class="string">ame":"</span>infoT<span class="string">able"&#125;"</span><span class="string">""</span></span><br><span class="line">  <span class="keyword">val</span> gson = <span class="keyword">new</span> <span class="type">Gson</span>()</span><br><span class="line">  <span class="keyword">val</span> pGson: java.util.<span class="type">Map</span>[<span class="type">String</span>, <span class="type">String</span>] = gson.fromJson(jsonparam, classOf[java.util.<span class="type">Map</span>[<span class="type">String</span>, <span class="type">String</span>]])</span><br><span class="line">  <span class="keyword">val</span> historyTable = pGson.get(<span class="string">"tableName"</span>)</span><br><span class="line">  println(historyTable)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> scala </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> scala </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spark读写数据</title>
+      <link href="2020-Spark/spark-sql.html"/>
+      <url>2020-Spark/spark-sql.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="读Mysql作为DataFrame"><a href="#读Mysql作为DataFrame" class="headerlink" title="读Mysql作为DataFrame"></a>读Mysql作为DataFrame</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> <span class="type">Mysql</span></span><br><span class="line"><span class="keyword">import</span> java.util.<span class="type">Properties</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.sql.<span class="type">DataFrame</span></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.sql.hive.<span class="type">HiveContext</span></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.&#123;<span class="type">SparkConf</span>, <span class="type">SparkContext</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SparkSQL1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setAppName(<span class="string">s"<span class="subst">$&#123;this.getClass.getSimpleName&#125;</span>"</span>).setMaster(<span class="string">"local"</span>)</span><br><span class="line">    <span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</span><br><span class="line">    <span class="keyword">val</span> sqlContext = <span class="keyword">new</span> <span class="type">HiveContext</span>(sc)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//实例代码</span></span><br><span class="line">    <span class="keyword">val</span> properties = <span class="keyword">new</span> <span class="type">Properties</span>()</span><br><span class="line">properties.put(<span class="string">"user"</span>,<span class="string">"xxx"</span>)</span><br><span class="line">properties.put(<span class="string">"password"</span>,<span class="string">"xxx"</span>)</span><br><span class="line"><span class="keyword">val</span> url = <span class="string">"jdbc:mysql://192.168.11.26:3306/test_db"</span></span><br><span class="line"><span class="keyword">val</span> df: <span class="type">DataFrame</span> = sqlc.read.jdbc(url,<span class="string">"info_table"</span>,properties)</span><br><span class="line">df.show()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="读CSV作为DataFrame"><a href="#读CSV作为DataFrame" class="headerlink" title="读CSV作为DataFrame"></a>读CSV作为DataFrame</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> data: <span class="type">DataFrame</span> = sqlc.read.format(<span class="string">"com.databricks.spark.csv"</span>)</span><br><span class="line">.option(<span class="string">"header"</span>, <span class="string">"true"</span>) <span class="comment">//在csv第一行有属性"true"，没有就是"false"</span></span><br><span class="line">.option(<span class="string">"inferSchema"</span>, <span class="literal">true</span>.toString) <span class="comment">//这是自动推断属性列的数据类型</span></span><br><span class="line">.load(<span class="string">"E:/test.csv"</span>)</span><br><span class="line">data.show</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> spark </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spark </tag>
             
         </tags>
       
