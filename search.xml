@@ -83,31 +83,6 @@
       <link href="2020-Scala/scala-json.html"/>
       <url>2020-Scala/scala-json.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Gson解析json"><a href="#Gson解析json" class="headerlink" title="Gson解析json"></a>Gson解析json</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.google.gson.<span class="type">Gson</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">App</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">  <span class="keyword">val</span> jsonparam = <span class="string">""</span><span class="string">"&#123;"</span>tableN<span class="string">ame":"</span>infoT<span class="string">able"&#125;"</span><span class="string">""</span></span><br><span class="line">  <span class="keyword">val</span> gson = <span class="keyword">new</span> <span class="type">Gson</span>()</span><br><span class="line">  <span class="keyword">val</span> pGson: java.util.<span class="type">Map</span>[<span class="type">String</span>, <span class="type">String</span>] = gson.fromJson(jsonparam, classOf[java.util.<span class="type">Map</span>[<span class="type">String</span>, <span class="type">String</span>]])</span><br><span class="line">  <span class="keyword">val</span> historyTable = pGson.get(<span class="string">"tableName"</span>)</span><br><span class="line">  println(historyTable)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> scala </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> scala </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>scala解析json</title>
-      <link href="2020-Spark/scala-json.html"/>
-      <url>2020-Spark/scala-json.html</url>
-      
         <content type="html"><![CDATA[<h2 id="Gson解析json"><a href="#Gson解析json" class="headerlink" title="Gson解析json"></a>Gson解析json</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.google.gson.<span class="type">Gson</span></span><br><span class="line"><span class="keyword">import</span> com.google.gson.<span class="type">JsonParser</span></span><br><span class="line"><span class="keyword">import</span> scala.collection.mutable.<span class="type">ArrayBuffer</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> jsonparam = <span class="string">""</span><span class="string">"&#123;"</span><span class="type">RERUNNING</span><span class="string">":&#123;"</span>nodeN<span class="string">ame":"</span>test_zhangjiaqi_1<span class="string">","</span>preN<span class="string">odes":[],"</span>prevI<span class="string">nterpreters":[],"</span><span class="string">rerun":"</span><span class="string">false"&#125;,"</span><span class="string">name":"</span><span class="number">123123123</span><span class="string">sdfasdf","</span><span class="string">path":[&#123;"</span><span class="string">name":"</span>hdfs:<span class="comment">//master.xxxx.com:8020/data","path":"hdfs://master.xxxx.com:8020/data"&#125;]&#125;"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> gson = <span class="keyword">new</span> <span class="type">Gson</span>()</span><br><span class="line"><span class="keyword">val</span> parser = <span class="keyword">new</span> <span class="type">JsonParser</span>();</span><br><span class="line"><span class="keyword">val</span> p = parser.parse(jsonparam).getAsJsonObject()</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取单个值</span></span><br><span class="line"><span class="keyword">val</span> name = p.get(<span class="string">"name"</span>)</span><br><span class="line">println(name)</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取嵌套json对象</span></span><br><span class="line"><span class="keyword">val</span> jsonArray = p.getAsJsonArray(<span class="string">"path"</span>)</span><br><span class="line"><span class="keyword">val</span> je = jsonArray.get(<span class="number">0</span>).getAsJsonObject</span><br><span class="line">println(je.get(<span class="string">"name"</span>))</span><br></pre></td></tr></table></figure>]]></content>
       
       
