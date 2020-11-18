@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhang35.github.io/2020-Spark/spark-sql.html</loc>
+    
+    <lastmod>2020-11-18T05:43:56.905Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/spark-scala-wordcount.html</loc>
+    
+    <lastmod>2020-11-18T05:43:51.757Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/spark-rdd.html</loc>
+    
+    <lastmod>2020-11-18T05:43:40.409Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/pyspark-wordcount.html</loc>
+    
+    <lastmod>2020-11-18T05:43:37.334Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhang35.github.io/2020-Spark/pyspark-dataframe.html</loc>
+    
+    <lastmod>2020-11-18T05:43:29.286Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhang35.github.io/2020-LeetCode/leetcode-117.html</loc>
     
     <lastmod>2020-11-18T05:09:48.297Z</lastmod>
@@ -93,27 +128,6 @@
   </url>
   
   <url>
-    <loc>https://zhang35.github.io/2020-Spark/pyspark-dataframe.html</loc>
-    
-    <lastmod>2020-10-22T09:11:46.135Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-Spark/pyspark-wordcount.html</loc>
-    
-    <lastmod>2020-10-19T10:07:41.649Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-Spark/spark-scala-wordcount.html</loc>
-    
-    <lastmod>2020-10-19T09:31:45.025Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zhang35.github.io/2020-Python/Flask-SQLAlchemy%E7%9A%84%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5.html</loc>
     
     <lastmod>2020-10-19T06:05:44.964Z</lastmod>
@@ -166,20 +180,6 @@
     <loc>https://zhang35.github.io/2020-Scala/scala-json.html</loc>
     
     <lastmod>2020-09-30T08:42:51.368Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-Spark/spark-rdd.html</loc>
-    
-    <lastmod>2020-09-30T08:22:46.754Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhang35.github.io/2020-Spark/spark-sql.html</loc>
-    
-    <lastmod>2020-09-30T03:32:23.879Z</lastmod>
     
   </url>
   
