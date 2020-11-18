@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zhang35.github.io/2020-Python/python-grammar.html</loc>
+    <lastmod>2020-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Python/http.html</loc>
+    <lastmod>2020-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://zhang35.github.io/2020-Python/Flask-SQLAlchemy%E7%9A%84%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5.html</loc>
+    <lastmod>2020-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://zhang35.github.io/2020-Spark/spark-sql.html</loc>
     <lastmod>2020-11-18</lastmod>
   </url>
@@ -73,19 +85,7 @@
     <lastmod>2020-11-18</lastmod>
   </url>
   <url>
-    <loc>https://zhang35.github.io/2020-Python/Flask-SQLAlchemy%E7%9A%84%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5.html</loc>
-    <lastmod>2020-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://zhang35.github.io/2020-Python/http.html</loc>
-    <lastmod>2020-10-19</lastmod>
-  </url>
-  <url>
     <loc>https://zhang35.github.io/2020-Postgis/queries.html</loc>
-    <lastmod>2020-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://zhang35.github.io/2020-Python/jupyter-lab.html</loc>
     <lastmod>2020-10-19</lastmod>
   </url>
   <url>
@@ -107,10 +107,6 @@
   <url>
     <loc>https://zhang35.github.io/2020-SQL/sql-grammar.html</loc>
     <lastmod>2020-09-29</lastmod>
-  </url>
-  <url>
-    <loc>https://zhang35.github.io/2020-Python/python-grammar.html</loc>
-    <lastmod>2020-09-28</lastmod>
   </url>
   <url>
     <loc>https://zhang35.github.io/2018-Algorithm/c-2-side-bubble-sort.html</loc>
